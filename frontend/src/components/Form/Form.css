@@ -5,6 +5,10 @@ form {
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .form-header {
@@ -100,4 +104,26 @@ button:active::before {
     font-size: 30px;
     text-align: center;
   }
+  
+.secondary-hero-text{
+  font-size:20px;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:#4a4b4e;
+  margin-left: 4px;
+}
+
+}
+
+
+.secondary-hero-text{
+  font-size:24px;
+  margin-top:20px;
+  margin-bottom:20px;
+  color:#4a4b4e;
+}
+
+.mail-link{
+  text-decoration: none;
+  padding-left: 10px;
 }

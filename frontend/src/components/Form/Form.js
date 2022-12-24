@@ -5,6 +5,7 @@ import './Form.css'; // Import the stylesheet
 import {useState,useRef,useEffect} from 'react';
 const Form = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
   const firstNameField = useRef(null);
   const lastNameField = useRef(null);
   const phoneField = useRef(null);
@@ -12,6 +13,9 @@ const Form = () => {
   const messageField = useRef(null);
   const servicesField = useRef(null);
   
+  const  handleChange=(event) =>{
+    setIsChecked(event.target.checked);
+  }
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -46,8 +50,14 @@ const Form = () => {
       alert('Please enter a valid phone number');
     } else if (!emailPattern.test(email)) {
       alert('Please enter a valid email address');
-    } else {
+    } 
+    else if(isChecked==='False'){
       
+
+    }
+    
+    else if(isChecked==='True') {
+      console.log(isChecked);
     const formData = {
       name: name,
       phone: phoneField.current.value,
@@ -69,8 +79,8 @@ const Form = () => {
       .validate(formData, { abortEarly: false })
       .then(() => {
         // Form data is valid, send the request
-        axios 
-          .post('https://mint-forms.ieee-mint.org/api/form/addresponse?formId=task', formData, {formId:'task',
+        axios
+          .post('https://mint-forms.ieee-mint.org/api/form/addresponse?formId=task', formData, {formId: 'task',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
             },
@@ -96,6 +106,10 @@ const Form = () => {
   return (
     <form className="form" onSubmit={sendForm}>
        <div className="form-header">Let's level up your brand,together</div>
+       <div className="secondary-hero-text">You can reach us anytime via
+    <a href="https://mail.google.com/" target="_blank" className="mail-link">
+    hi@untitledui.com
+    </a></div>
       {!isMobile && (
         <>
         <label htmlFor="name" >Name </label>
@@ -156,7 +170,42 @@ isMobile && (
        
           <label htmlFor="mobile-message">Message:</label>
           <textarea type="msg-text" id="mobile-message" name="mobile-message" ref={messageField}/>
-      <button type="submit" style={{width:'80%'}} onClick={sendForm}>Send  message</button>
+          
+          <label htmlFor="services" style={{marginTop:'10px'}}>Services</label>
+          <div className='checkbox-container'  ref={servicesField}>
+           
+          <div style={{ display: 'flex',flexDirection: 'row',gap: 2 }}>
+            <input type="checkbox" id="website-design" name="services" value="Website design" />
+            <label htmlFor="website-design" >Website design</label>
+            <input type="checkbox" id="content-creation" name="services" value="Content creation"  style={{marginLeft:'100px'}} ref={servicesField}/>
+            <label htmlFor="content-creation">Content creation</label>
+          </div>
+           
+          <div style={{ display: 'flex' }}>
+            <input type="checkbox" id="ux-design" name="services" value="UX design" />
+            <label htmlFor="ux-design">UX design</label>
+            <input type="checkbox" id="strategy-consulting" name="services" value="Strategy & consulting"style={{marginLeft:'140px'}} />
+            <label htmlFor="strategy-consulting">Strategy & consulting</label>
+          </div>
+           
+          <div style={{ display: 'flex' }}>
+            <input type="checkbox" id="user-research" name="services" value="User research" />
+            <label htmlFor="user-research">User research</label>
+            <input type="checkbox" id="other" name="services" value="Other" style={{marginLeft:'117px'}}/>
+            <label htmlFor="other">Other</label>
+          </div>
+          </div>
+          <div style={{ display: 'flex',marginTop:'20px',marginBottom:'20px'}}>
+            <input type="checkbox" id="privacy-policy" name="privacy-policy" value="privacy-policy" style={{marginLeft:'117px'}}
+            
+        checked={isChecked}
+        onChange={handleChange}/>
+            <label htmlFor="other">You agree to our friendly <a href="https://mail.google.com/" target="_blank" className="mail-link">
+            privacy policy
+    </a>
+            </label>
+            </div>
+      <button type="submit" style={{width:'80%',marginTop:'100px'}} onClick={sendForm}>Send  message</button>
            
         </>
       )}

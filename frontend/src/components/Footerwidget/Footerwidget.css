@@ -121,5 +121,16 @@
     background-color: #F4F7FC;
   padding-bottom: 5px;
   }
+
+  
+  .footer-widget-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 20px;
+  }
+
+  .footer-widget-column {
+    grid-column: span 1;
+  }
   
   }
