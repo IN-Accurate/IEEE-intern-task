@@ -108,3 +108,18 @@
   height: 50%;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
 }
+
+
+@media (max-width: 768px) {
+  .footer-widget {
+  padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self;
+    gap:1px;
+    background-color: #F4F7FC;
+  padding-bottom: 5px;
+  }
+  
+  }

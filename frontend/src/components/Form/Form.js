@@ -35,6 +35,19 @@ const Form = () => {
     const checkedServices = [...servicesField.current.querySelectorAll('input:checked')].map(
       (input) => input.value
     );
+    
+    const phoneNumberPattern = /^\d{10}$/;
+    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+    const phoneNumber = phoneField.current.value.trim();
+    const email = emailField.current.value.trim();
+
+    if (!phoneNumberPattern.test(phoneNumber)) {
+      alert('Please enter a valid phone number');
+    } else if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address');
+    } else {
+      
     const formData = {
       name: name,
       phone: phoneField.current.value,
@@ -56,8 +69,8 @@ const Form = () => {
       .validate(formData, { abortEarly: false })
       .then(() => {
         // Form data is valid, send the request
-        axios
-          .post('https://mint-forms.ieee-mint.org/api/form/addresponse?formld-task', formData, {
+        axios 
+          .post('https://mint-forms.ieee-mint.org/api/form/addresponse?formId=task', formData, {formId:'task',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded',
             },
@@ -77,6 +90,8 @@ const Form = () => {
         console.log(formData);
         console.error(errors);
       });
+    }
+  
   };
   return (
     <form className="form" onSubmit={sendForm}>

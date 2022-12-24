@@ -1,4 +1,5 @@
 import React from "react";
+import {useState,useRef,useEffect} from 'react';
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import CopyrightIcon from "@material-ui/icons/Copyright";
@@ -34,6 +35,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Footer = () => {
+  
+  const [isMobile, setIsMobile] = useState(false);
   const classes = useStyles();
 
   return (
