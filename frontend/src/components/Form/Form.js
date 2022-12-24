@@ -52,7 +52,7 @@ const Form = () => {
       alert('Please enter a valid email address');
     } 
     else if(isChecked==='False'){
-      
+
 
     }
     
@@ -107,7 +107,7 @@ const Form = () => {
     <form className="form" onSubmit={sendForm}>
        <div className="form-header">Let's level up your brand,together</div>
        <div className="secondary-hero-text">You can reach us anytime via
-    <a href="https://mail.google.com/" target="_blank" className="mail-link">
+    <a href="https://mail.google.com/" target="_blank" rel="noreferrer" className="mail-link">
     hi@untitledui.com
     </a></div>
       {!isMobile && (
@@ -200,7 +200,7 @@ isMobile && (
             
         checked={isChecked}
         onChange={handleChange}/>
-            <label htmlFor="other">You agree to our friendly <a href="https://mail.google.com/" target="_blank" className="mail-link">
+            <label htmlFor="other">You agree to our friendly <a href="https://mail.google.com/" target="_blank" rel="noreferrer" className="mail-link">
             privacy policy
     </a>
             </label>
