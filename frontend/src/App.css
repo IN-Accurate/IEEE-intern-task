@@ -1,0 +1,24 @@
+img{
+    width:50vw;
+    height: auto;
+}
+.content-wrapper{
+    display:flex;
+    margin-top: 70px;
+    gap:50px;
+    flex-direction: row;
+}
+.app-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 768px) {
+    #content-wrapper {
+      flex-direction: row;
+    }
+  
+    #logo {
+      display: none;
+    }
+  }
+  
