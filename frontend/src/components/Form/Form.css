@@ -7,12 +7,14 @@ form {
     border-radius: 10px;
   }
   
+  .form-header {
+    font-size:60px;
+  }
   label {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
   }
-  
   input[type="text"],
   input[type="email"],
   input[type="tel"]{
@@ -24,9 +26,9 @@ form {
     border-radius: 4px;
     font-size: 16px;
   }
-  input[type="msg-text"]{
+  textarea{
     width: 80%;
-    height: 130px;
+    height: 120px;
     padding: 12px 20px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -73,11 +75,9 @@ form {
     height: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 100%;
     pointer-events: none;
-    transition: width 0.2s, height 0.2s;
   }
   
   button:active::before {

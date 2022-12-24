@@ -1,15 +1,31 @@
-import React from 'react';
-import './Footerwidget.css'
+import React from "react";
+import "./Footerwidget.css";
 const FooterWidget = () => {
   return (
     <footer>
       <div className="footer-widget">
-        <div className="footer-widget-column">
+        <div className="left-side">
+          <div className="icon-header-container">
+            <div>
+              <div className="square">
+                <div className="circle" />
+              </div>
+            </div>
+            <div className="icon-header">UntitledUI</div>
+          </div>
+          <div className="icon-text">
+            <div>Design amazing digital experiences that</div>
+            <div>create more happy in the world.</div>
+          </div>
+        </div>
+        <div className="footer-widget-column first-col">
           <h3>Product</h3>
           <ul>
             <li>Overview</li>
             <li>Features</li>
-            <li>Solutions <span className="new">New</span></li>
+            <li>
+              Solutions <span className="new">New</span>
+            </li>
             <li>Tutorials</li>
             <li>Pricing</li>
             <li>Releases</li>

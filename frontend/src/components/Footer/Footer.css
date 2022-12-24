@@ -1,0 +1,19 @@
+.copyright-container{
+    display: flex;
+    flex-direction: row;
+    color:#9BA3AD;
+    font-size: 16px;
+    margin-top:10px;
+}
+
+.copyright-icon{
+    font-size: 15;
+    color:#9BA3AD;
+    justify-content: flex-start;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -7,7 +7,7 @@ import logo from './assets/images/icon.jpg';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App scrollable">
       <div className="app-wrapper">
       <div>
       <Navbar/>

@@ -11,6 +11,7 @@ const Form = () => {
   const emailField = useRef(null);
   const messageField = useRef(null);
   const servicesField = useRef(null);
+  
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
@@ -79,20 +80,21 @@ const Form = () => {
   };
   return (
     <form className="form" onSubmit={sendForm}>
-       
+       <div className="form-header">Let's level up your brand,together</div>
       {!isMobile && (
         <>
-        <label htmlFor="name">Name </label>
-         <input type="text" id="name" name="name"  ref={firstNameField}/>
+        <label htmlFor="name" >Name </label>
+         <input type="text" id="name" name="name" placeholder='Your name' ref={firstNameField}/>
           
        <label htmlFor="email">Email</label>
-       <input type="email" id="email" name="email" ref={emailField}/>
+       <input type="email" id="email" name="email" placeholder='you@company.com' ref={emailField}/>
         
        <label htmlFor="phone">Phone Number</label>
-       <input type="tel" id="phone" name="phone" ref={phoneField}/>
+       <input type="tel" id="phone" name="phone" placeholder='+1 (555) 000-0000' ref={phoneField}/>
         
           <label htmlFor="message">How can we help?</label>
-          <input type="msg-text"  id="message" name="message" ref={messageField}/>
+          <textarea type="msg-text"  id="message" name="message" className='msg-txt-container'
+           placeholder='Tell us a little about the project...'ref={messageField} />
            
            
           <label htmlFor="services">Services</label>
@@ -138,7 +140,7 @@ isMobile && (
       <input type="tel" id="phone" name="phone"  ref={phoneField}/>
        
           <label htmlFor="mobile-message">Message:</label>
-          <input type="msg-text" id="mobile-message" name="mobile-message" ref={messageField}/>
+          <textarea type="msg-text" id="mobile-message" name="mobile-message" ref={messageField}/>
       <button type="submit" style={{width:'80%'}} onClick={sendForm}>Send  message</button>
            
         </>
