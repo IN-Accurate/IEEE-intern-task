@@ -139,14 +139,14 @@ const Form = () => {
           <div style={{ display: 'flex' }}>
             <input type="checkbox" id="ux-design" name="services" value="UX design" />
             <label htmlFor="ux-design">UX design</label>
-            <input type="checkbox" id="strategy-consulting" name="services" value="Strategy & consulting"style={{marginLeft:'140px'}} />
+            <input type="checkbox" id="strategy-consulting" name="services" value="Strategy & consulting"style={{marginLeft:'150px'}} />
             <label htmlFor="strategy-consulting">Strategy & consulting</label>
           </div>
            
           <div style={{ display: 'flex' }}>
             <input type="checkbox" id="user-research" name="services" value="User research" />
             <label htmlFor="user-research">User research</label>
-            <input type="checkbox" id="other" name="services" value="Other" style={{marginLeft:'117px'}}/>
+            <input type="checkbox" id="other" name="services" value="Other" style={{marginLeft:'122px'}}/>
             <label htmlFor="other">Other</label>
           </div>
           </div>

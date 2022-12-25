@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import Topbar from './components/Topbar/Topbar';
 import Form from './components/Form/Form';
 import Footerwidget from './components/Footerwidget/Footerwidget'
 import Footer from './components/Footer/Footer';
@@ -9,6 +10,9 @@ function App() {
   return (
     <div className="App scrollable">
       <div className="app-wrapper">
+        <div>
+          <Topbar/>
+        </div>
       <div>
       <Navbar/>
       </div>

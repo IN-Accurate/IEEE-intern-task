@@ -98,8 +98,7 @@ const FooterWidget = () => {
             <div className="icon-header">UntitledUI</div>
           </div>
           <div className="icon-text">
-            <div>Design amazing digital experiences that</div>
-            <div>create more happy in the world.</div>
+            <span>Design amazing digital experiences that create more happy in the world.</span>
           </div>
         </div>
         <div className="footer-widget-container">

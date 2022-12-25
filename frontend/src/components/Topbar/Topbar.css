@@ -1,0 +1,40 @@
+.topbar-container{
+    background-color:#d0d3d7 ;
+    height: 40px;
+}
+.circle-icon-topbar{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color:white;
+  }
+
+.topbar-left{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    padding-left:10px;
+    padding-top:10px;
+}
+
+@media (max-width: 768px) {
+    .topbar-container{
+        background-color:#d0d3d7 ;
+        height: 24px;
+    }
+    .circle-icon-topbar{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color:white;
+      }
+    
+    .topbar-left{
+        display: flex;
+        flex-direction: row;
+        gap:5px;
+        padding-left:10px;
+        padding-top:8px;
+    }
+}
+  
