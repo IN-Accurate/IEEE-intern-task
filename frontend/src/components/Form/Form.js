@@ -99,8 +99,11 @@ const Form = () => {
             )
             .then((response) => {
               if (response.status === 200) {
-                console.log(formData);
+                console.log("Form data:\n",formData);
+                console.log("\nResponse : ",response);
                 console.log("Successfully sent data");
+                alert("Successfully sent data !");
+                
               }
             })
             .catch((error) => {
@@ -339,26 +342,22 @@ const Form = () => {
           <div
             style={{ display: "flex", marginTop: "20px", marginBottom: "20px" }}
           >
+            <div className="priv-pol-cont">
             <input
               type="checkbox"
               id="privacy-policy"
               name="privacy-policy"
               value="privacy-policy"
-              style={{ marginLeft: "117px" }}
+              style={{ marginLeft: "30px" }}
               checked={isChecked}
               onChange={handleChange}
             />
-            <label htmlFor="other">
-              You agree to our friendly{" "}
-              <a
-                href="https://mail.google.com/"
-                target="_blank"
-                rel="noreferrer"
-                className="mail-link"
-              >
+            <label htmlFor="privacy-policy" style={{ marginTop: "30px"}}>
+              You agree to our friendly
+              <div className="mail-link">
                 privacy policy
-              </a>
-            </label>
+              </div>
+            </label></div>
           </div>
           <button
             type="submit"

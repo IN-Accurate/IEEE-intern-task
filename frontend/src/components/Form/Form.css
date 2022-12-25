@@ -11,10 +11,13 @@ form {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-label {
+label{
   display: block;
   margin-bottom: 8px;
   font-size: 20px;
+}
+input[type="checkbox"]{
+  cursor:default;
 }
 input[type="text"],
 input[type="email"],
@@ -26,6 +29,7 @@ input[type="tel"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  cursor:text;
 }
 textarea {
   width: 80%;
@@ -36,6 +40,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+  cursor:text;
 }
 
 .checkbox-container {
@@ -55,6 +60,10 @@ button {
   font-size: 16px;
   transition: background-color 0.2s;
   margin-top: 40px;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
 }
 
 button:hover {
@@ -96,6 +105,7 @@ button:active::before {
   text-decoration: none;
   padding-left: 10px;
   color:aqua;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -128,6 +138,11 @@ label {
   
   color:#8cabff;
   margin-left: 4px;
+}
+
+.priv-pol-cont{
+  display: flex;
+  flex-direction: row;
 }
 
 }

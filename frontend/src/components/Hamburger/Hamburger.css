@@ -35,7 +35,6 @@
   
   .hamburger-dropdown-content {
   display: none;
-  left: -120%;
   border-radius: 14px;
   position: absolute;
   background-color: #f9f9f9;
@@ -48,14 +47,16 @@
   
   .hamburger-dropdown:hover .hamburger-dropdown-content {
     display: flex;
+    z-index: 2;
+    left:-7%;
     flex-direction: column;
-    left: -120%;
     align-items: center;
+    cursor: pointer;
   }
 
   .hamburger-dropdown-item:hover{
     border-radius: 5px;
-    left: -120%;
+    left:-7%;
     background-color:rgba(0,0,0,0.2);
     transform: scale(1.1);
     transition: transform 0.3s;
@@ -63,6 +64,7 @@
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+    cursor: pointer;
 }
   
 .hamburger-dropdown-content dropdown-item:hover {

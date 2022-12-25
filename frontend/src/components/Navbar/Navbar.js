@@ -29,12 +29,12 @@ function Navbar() {
           </div>
           <ul className="navbar-items">
             <li className="navbar-item">
-              <a href="/">Home</a>
+              <div>Home</div>
             </li>
             <li className="navbar-item dropdown">
-              <a href="/products">
+              <div>
                 Products <FontAwesomeIcon icon={faCaretDown} />
-              </a>
+              </div>
               <div className="dropdown-content">
                 <a href="/product1" className="dropdown-item">
                   Product 1
@@ -42,29 +42,29 @@ function Navbar() {
                 <a href="/product2" className="dropdown-item">
                   Product 2
                 </a>
-                <a href="/product3" className="dropdown-item">
+                <div className="dropdown-item">
                   Product 3
-                </a>
+                </div>
               </div>
             </li>
             <li className="navbar-item dropdown">
-              <a href="/resources">
+              <div>
                 Resources <FontAwesomeIcon icon={faCaretDown} />
-              </a>
+              </div>
               <div className="dropdown-content">
-                <a href="/resource1" className="dropdown-item">
+                <div className="dropdown-item">
                   Resource 1
-                </a>
-                <a href="/resource2" className="dropdown-item">
+                </div>
+                <div className="dropdown-item">
                   Resource 2
-                </a>
-                <a href="/resource3" className="dropdown-item">
+                </div>
+                <div className="dropdown-item">
                   Resource 3
-                </a>
+                </div>
               </div>
             </li>
             <li className="navbar-item">
-              <a href="/pricing">Pricing</a>
+              <div>Pricing</div>
             </li>
           </ul>
         </nav>

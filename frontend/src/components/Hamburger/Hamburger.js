@@ -8,13 +8,10 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 function HamburgerMenu() {
     const [isOpen, setOpen] = useState(false);
 
-    const handleLogoClick = () => {
-        window.location.href = '/';
-      }
   return (
     <div className="hamburger-container">
         <div className="navbar-logo">
-            <div className="logo-icon-container" onClick={handleLogoClick}>
+            <div className="logo-icon-container" >
               <div className="square">
                 <div className="circle" />
               </div>
@@ -26,42 +23,42 @@ function HamburgerMenu() {
           
           <ul className="hamburger-navbar-items">
             <li className="hamburger-navbar-item">
-              <a href="/">Home</a>
+              <div>Home</div>
             </li>
             <li className="hamburger-navbar-item hamburger-dropdown">
-              <a href="/products">
+              <div>
                 Products <FontAwesomeIcon icon={faCaretDown} />
-              </a>
+              </div>
               <div className="hamburger-dropdown-content">
-                <a href="/product1" className="hamburger-dropdown-item">
+                <div className="hamburger-dropdown-item">
                   Product 1
-                </a>
-                <a href="/product2" className="hamburger-dropdown-item">
+                </div>
+                <div className="hamburger-dropdown-item">
                   Product 2
-                </a>
-                <a href="/product3" className="hamburger-dropdown-item">
+                </div>
+                <div className="hamburger-dropdown-item">
                   Product 3
-                </a>
+                </div>
               </div>
             </li>
             <li className="hamburger-navbar-item hamburger-dropdown">
-              <a href="/resources">
+              <div>
                 Resources <FontAwesomeIcon icon={faCaretDown} />
-              </a>
+              </div>
               <div className="hamburger-dropdown-content">
-                <a href="/resource1" className="hamburger-dropdown-item">
+                <div className="hamburger-dropdown-item">
                   Resource 1
-                </a>
-                <a href="/resource2" className="hamburger-dropdown-item">
+                </div>
+                <div className="hamburger-dropdown-item">
                   Resource 2
-                </a>
-                <a href="/resource3" className="hamburger-dropdown-item">
+                </div>
+                <div className="hamburger-dropdown-item">
                   Resource 3
-                </a>
+                </div>
               </div>
             </li>
             <li className="hamburger-navbar-item">
-              <a href="/pricing">Pricing</a>
+              <div>Pricing</div>
             </li>
           </ul>
         </nav>
