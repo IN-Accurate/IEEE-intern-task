@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
 form {
   display: flex;
   flex-direction: column;
@@ -9,10 +10,6 @@ form {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-}
-
-.form-header {
-  font-size: 60px;
 }
 label {
   display: block;
@@ -121,6 +118,7 @@ label {
   .form-header {
     font-size: 30px;
     text-align: center;
+    font-weight: bold;
   }
   
 .secondary-hero-text{
