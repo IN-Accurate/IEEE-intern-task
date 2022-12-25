@@ -51,13 +51,8 @@ const Form = () => {
     } else if (!emailPattern.test(email)) {
       alert('Please enter a valid email address');
     } 
-    else if(isChecked==='False'){
-
-
-    }
     
-    else if(isChecked==='True') {
-      console.log(isChecked);
+    else {
     const formData = {
       name: name,
       phone: phoneField.current.value,

@@ -2,8 +2,9 @@ import React from "react";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-
 import { useState, useEffect } from "react";
+import Hamburger from "../Hamburger/Hamburger";
+
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const handleLogoClick = () => {
@@ -67,6 +68,9 @@ function Navbar() {
             </li>
           </ul>
         </nav>
+      )}
+      {isMobile && (
+        <Hamburger/>
       )}
     </div>
   );
